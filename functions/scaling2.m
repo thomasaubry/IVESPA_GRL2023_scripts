@@ -1,0 +1,16 @@
+function H=scaling2(parameters,inputs)
+%function for the "canonical" power-law model
+%H= height (km a.v.l.)
+%M=Mass eruption rate (kg/s)
+%pi = model parameter
+M=inputs(:,1);
+N=inputs(:,2);
+W=inputs(:,3);
+p1=parameters(1);
+p2=parameters(2);
+p3=parameters(3);
+p4=parameters(4);
+H=p1*M.^p2.*N.^p3.*W.^p4;
+
+
+end
